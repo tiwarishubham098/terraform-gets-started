@@ -10,7 +10,7 @@ terraform {
     hostname = "app.terraform.io"
     organization = "BEE-A-LEARNER"
     workspaces {
-      prefix = "LER-"
+      name = "LER-TST"
     }
   }
 }
