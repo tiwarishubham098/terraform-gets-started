@@ -20,7 +20,4 @@ jobs:
           tf_actions_comment: true
           tf_actions_cli_credentials_hostname: app.terraform.io 
           tf_actions_cli_credentials_token: ${{ secrets.TF_API_TOKEN }}
-          #args: '-backend-config="token=${{ secrets.TF_API_TOKEN }}" -backend-config="organization=BEE-A-LEARNER"'
-        env:
-          #TF_WORKSPACE: dev
-          GITHUB_TOKEN: 'ot-61Wyhfew8HejC5D1'
+        
