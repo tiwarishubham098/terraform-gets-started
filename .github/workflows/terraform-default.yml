@@ -20,4 +20,4 @@ jobs:
           tf_actions_comment: true
         env:
           TF_WORKSPACE: dev
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TF_API_TOKEN }}
