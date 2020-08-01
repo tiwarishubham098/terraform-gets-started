@@ -16,12 +16,12 @@ jobs:
       run:
         shell: bash
         working-directory: ./Iac
-
+      
     # Checkout the repository to the GitHub Actions runner
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
+        
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
@@ -36,6 +36,7 @@ jobs:
     - name: Terraform Init
       id: init
       run: terraform init
+      working-directory: Iac
 
     - name: Terraform Validate
       id: validate
