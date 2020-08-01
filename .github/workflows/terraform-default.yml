@@ -18,9 +18,7 @@ jobs:
           tf_actions_subcommand: 'init'
           tf_actions_working_dir: 'Iac'
           tf_actions_comment: true
-          tf_actions_cli_credentials_hostname: app.terraform.io 
-          tf_actions_cli_credentials_token: ${{ secrets.TF_API_TOKEN }}
-          #args: '-var="client_secret=${{ secrets.ARM_CLIENT_SECRET }}"'
+
           
       - name: 'Terraform Plan'
         uses: hashicorp/terraform-github-actions@master
@@ -29,9 +27,6 @@ jobs:
           tf_actions_subcommand: 'plan'
           tf_actions_working_dir: 'Iac'
           tf_actions_comment: true
-          tf_actions_cli_credentials_hostname: app.terraform.io 
-          tf_actions_cli_credentials_token: ${{ secrets.TF_API_TOKEN }}
-          #args: '-var="client_secret=${{ secrets.ARM_CLIENT_SECRET }}"'
         env:
           TF_WORKSPACE: dev
           TF_VAR_client_secret : ${{ secrets.ARM_CLIENT_SECRET }}
