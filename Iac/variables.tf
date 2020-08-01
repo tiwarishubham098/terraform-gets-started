@@ -19,7 +19,7 @@ variable "environment_instance" {
 variable "location" {
   default ="west europe"
 }
-variable "CLIENT_SECRET" {
+variable "client_secret" {
   default ="none"
 }
 
