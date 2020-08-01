@@ -30,4 +30,9 @@ jobs:
           tf_actions_comment: true
           tf_actions_cli_credentials_hostname: app.terraform.io 
           tf_actions_cli_credentials_token: ${{ secrets.TF_API_TOKEN }}
-        
+        env:
+          TF_WORKSPACE: dev
+          ARM_SUBSCRIPTION_ID: 2a04288a-8136-4880-b526-c6070e59f004
+          ARM_TENANT_ID: 37d20c78-05e3-416d-83ab-cdbc21fed22a
+          ARM_CLIENT_ID: ecc4be67-51ce-4780-a17a-75426c4b8a7a
+          ARM_CLIENT_SECRET : ${{ secrets.ARM_CLIENT_SECRET }}
