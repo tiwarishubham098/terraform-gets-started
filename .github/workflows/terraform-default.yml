@@ -31,7 +31,7 @@ jobs:
           tf_actions_comment: true
           tf_actions_cli_credentials_hostname: app.terraform.io 
           tf_actions_cli_credentials_token: ${{ secrets.TF_API_TOKEN }}
-          args: '-var="client_secret="s~p93kYHx296yIxG.f--aC0y4NwR5E_h-G""'
+          args: '-var="client_secret=${{ secrets.ARM_CLIENT_SECRET }}"'
         env:
           TF_WORKSPACE: dev
           TF_VAR_CLIENT_SECRET : ${{ secrets.ARM_CLIENT_SECRET }}
