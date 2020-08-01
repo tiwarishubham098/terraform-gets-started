@@ -11,6 +11,14 @@ resource "azurerm_resource_group" "platform_rg" {
   location = var.location
 }
 
+
+# An example resource that does nothing.
+     resource "null_resource" "example" {
+       triggers = {
+         value = "A example resource that does nothing!"
+       }
+     }
+
 output "local_rg_name" {
   value = local.resource_group_name
 }
@@ -21,21 +29,5 @@ output "outcome_1" {
 output "outcome_lookup_type" {
   value = local.lookup_type
 }
-# output "list_type_var_output" {
-#   value = var.list_type_var
-# }
-# output "tags_output" {
-#   value = var.tags
-# }
-# output "requires_approval" {
-#   value = var.requires_approval
-# }
-# output "number_value" {
-#   value = var.number_value
-# }
-
-# output "car_model" {
-#   value = var.car_model
-# }
 
 ###########################Learning about the variables###########################
