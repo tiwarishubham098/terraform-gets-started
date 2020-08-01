@@ -59,7 +59,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./.github/workflows/data/local
+        working-directory: ./Iac
 
     # Checkout the repository to the GitHub Actions runner
     steps:
