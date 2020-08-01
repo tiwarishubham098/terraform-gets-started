@@ -18,6 +18,7 @@ jobs:
           tf_actions_subcommand: 'init'
           tf_actions_working_dir: 'Iac'
           tf_actions_comment: true
+          args: '-backend-config="token=${{ secrets.TF_API_TOKEN }}"'
         env:
-          TF_WORKSPACE: dev
-          GITHUB_TOKEN: ${{ secrets.TF_API_TOKEN }}
+          #TF_WORKSPACE: dev
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
