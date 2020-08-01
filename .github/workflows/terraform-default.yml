@@ -21,4 +21,4 @@ jobs:
           args: '-backend-config="token=${{ secrets.TF_API_TOKEN }}" -backend-config="organization=BEE-A-LEARNER"'
         env:
           #TF_WORKSPACE: dev
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 'ot-61Wyhfew8HejC5D1'
