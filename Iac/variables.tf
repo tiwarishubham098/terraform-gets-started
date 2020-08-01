@@ -19,11 +19,9 @@ variable "environment_instance" {
 variable "location" {
   default ="west europe"
 }
-
-
-
-
-
+variable "CLIENT_SECRET" {
+  default ="none"
+}
 
 #TF_VAR_zone="west europe" terraform apply
 variable "tags" {
