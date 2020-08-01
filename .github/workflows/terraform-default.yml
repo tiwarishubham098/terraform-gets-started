@@ -20,7 +20,7 @@ jobs:
           tf_actions_comment: true
           tf_actions_cli_credentials_hostname: app.terraform.io 
           tf_actions_cli_credentials_token: ${{ secrets.TF_API_TOKEN }}
-          args: '-var="client_secret=${{ secrets.ARM_CLIENT_SECRET }}"'
+          #args: '-var="client_secret=${{ secrets.ARM_CLIENT_SECRET }}"'
           
       - name: 'Terraform Plan'
         uses: hashicorp/terraform-github-actions@master
