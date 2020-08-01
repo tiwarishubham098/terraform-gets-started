@@ -1,48 +1,20 @@
-name: 'Terraform'
-
+name: 'Terraform GitHub Actions'
 on:
-  push:
-    branches:
-    - master
-  pull_request:
-
+  - pull_request
 jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./Iac
-      
-    # Checkout the repository to the GitHub Actions runner
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-        
-    # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
-    - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v1
-      with:
-        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-
-    - name: Terraform fmt
-      id: fmt
-      run: terraform fmt
-      continue-on-error: true
-
-    - name: Terraform Init
-      id: init
-      run: terraform init
-      working-directory: Iac
-
-    - name: Terraform Validate
-      id: validate
-      run: terraform validate -no-color
-
-    - name: Terraform Plan
-      id: plan
-      run: terraform plan -no-color
-      continue-on-error: true
+      - name: 'Checkout'
+        uses: actions/checkout@master
+      - name: 'Terraform Init'
+        uses: hashicorp/terraform-github-actions@master
+        with:
+          tf_actions_version: 0.12.13
+          tf_actions_subcommand: 'init'
+          tf_actions_working_dir: 'Iac'
+          tf_actions_comment: true
+        env:
+          TF_WORKSPACE: dev
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
