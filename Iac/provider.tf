@@ -9,12 +9,12 @@ provider "azurerm" {
   features {}
 }
 
-# terraform {
-#   backend "remote" {
-#     hostname = "app.terraform.io"
-#     organization = "BEE-A-LEARNER"
-#     workspaces {
-#       name = "LER-TST"
-#     }
-#   }
-# }
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "SmithaOrg"
+    workspaces {
+      name = "wsp-PaC"
+    }   
+  }
+}
