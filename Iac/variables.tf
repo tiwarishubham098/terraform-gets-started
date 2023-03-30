@@ -1,11 +1,11 @@
 
 variable "org_name" {
-  default     = "BEE"
+  default     = "Verity"
   description = "name of you orgnisation"
 }
 
 variable "project_name" {
-  default     = "LER"
+  default     = "Smithaproj"
   description = "name of you project"
   type        = string
 }
@@ -13,7 +13,7 @@ variable "environment_name" {
   default = "DEV"
 }
 variable "environment_instance" {
-  default = "99"
+  default = "001"
 }
 
 variable "location" {
