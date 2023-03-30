@@ -1,12 +1,12 @@
 
 variable "org_name" {
   default     = "Verity"
-  description = "name of you orgnisation"
+  description = "Shubham project"
 }
 
 variable "project_name" {
   default     = "Smithaproj"
-  description = "name of you project"
+  description = "Shubham project"
   type        = string
 }
 variable "environment_name" {
